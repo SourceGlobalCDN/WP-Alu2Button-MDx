@@ -2,7 +2,7 @@
 function alu_scripts()
 {
     if (is_single() || is_page()) {
-        wp_enqueue_script('alu', ALU_URL_JSDELIVR . "/static/js/index.js", array(), ALU_VERSION);
+        wp_enqueue_script('alu', ALU_CDN . "/static/js/index.js", array(), ALU_VERSION);
     }
 }
 add_action('wp_enqueue_scripts', 'alu_scripts', 20, 1);
@@ -11,7 +11,7 @@ add_filter('smilies_src', 'alu_smilies_src', 1, 10);
 function alu_smilies_src($img_src, $img, $siteurl)
 {
     $img = rtrim($img, "gif");
-    return ALU_URL_JSDELIVR . '/static/img/' . $img . 'gif';
+    return ALU_CDN . '/static/img/' . $img . 'gif';
 }
 
 function alu_get_wpsmiliestrans()

@@ -52,7 +52,7 @@ const ALU_VERSION = '1.0.7';
 define('ALU_URL', plugins_url('', __FILE__));
 define('ALU_PATH', dirname(__FILE__));
 define('ALU_ADMIN_URL', admin_url());
-const ALU_CDN = 'https://cdn.jsdelivr.net/gh/AH-dark/WP-Alu2Button-MDx@2.0.0';
+const ALU_CDN = 'https://cdn.jsdelivr.net/gh/AH-dark/WP-Alu2Button-MDx@b8cd7a5';
 
 /**
  * @action 加载函数
