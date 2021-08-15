@@ -1,0 +1,10 @@
+div.mdx-emj.mdx-emj-open {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+a.add-smile {
+    margin-left: 1px;
+    margin-right: 1px;
+}

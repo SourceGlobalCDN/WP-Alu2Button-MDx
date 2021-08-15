@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-    for (let el of document.getElementsByClassName('add-smily')) {
+    for (let el of document.getElementsByClassName('add-smile')) {
         el.addEventListener('click', function (e) {
             let myField,
                 _self = e.target.dataset.smilies ? e.target : e.target.parentNode,
