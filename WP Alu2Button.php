@@ -4,9 +4,9 @@
  * Plugin Name: WP Alu2Button with CDN
  * Plugin URI: 
  * Description: Add alu button to TinyMCE and add the alu expression in comment 
- * Version: 2.0.0
- * Author: AHdark
- * Author URI: https://ahdark.rc0.co
+ * Version: 1.0.6
+ * Author: AH-SourceStorage
+ * Author URI: https://github.com/AH-SourceStorage
  */
 
 function mce_smiley_button($buttons)
@@ -48,11 +48,11 @@ function mce_smiley_settings($settings)
 }
 add_filter('tiny_mce_before_init', 'mce_smiley_settings');
 
-const ALU_VERSION = '1.0.7';
+const ALU_VERSION = '1.0.6';
 define('ALU_URL', plugins_url('', __FILE__));
 define('ALU_PATH', dirname(__FILE__));
 define('ALU_ADMIN_URL', admin_url());
-const ALU_CDN = 'https://cdn.jsdelivr.net/gh/AH-dark/WP-Alu2Button-MDx@b8cd7a5';
+const ALU_CDN = '//source.ahdark.com/wordpress/plugin/Alu2Button-MDx/' . ALU_VERSION;
 
 /**
  * @action 加载函数
