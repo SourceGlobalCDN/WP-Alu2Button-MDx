@@ -2,17 +2,17 @@
 function alu_scripts()
 {
     if (is_single() || is_page()) {
-        wp_enqueue_script('alu', ALU_CDN . "/static/js/index.js", array(), ALU_VERSION);
-        wp_enqueue_script('alu', ALU_CDN . "/static/css/style.css", array(), ALU_VERSION);
+        wp_enqueue_script('alu', '//source.ahdark.com/wordpress/plugin/Alu2Button-MDx/' . ALU_VERSION . "/static/js/index.js", array(), ALU_VERSION);
+        wp_enqueue_script('alu', '//source.ahdark.com/wordpress/plugin/Alu2Button-MDx/' . ALU_VERSION . "/static/css/style.css", array(), ALU_VERSION);
     }
 }
 add_action('wp_enqueue_scripts', 'alu_scripts', 20, 1);
 
 add_filter('smilies_src', 'alu_smilies_src', 1, 10);
-function alu_smilies_src($img_src, $img, $siteurl)
+function alu_smilies_src($img_src, $img, $siteurl): string
 {
     $img = rtrim($img, "gif");
-    return ALU_CDN . '/static/img/' . $img . 'gif';
+    return '//source.ahdark.com/wordpress/plugin/Alu2Button-MDx/' . ALU_VERSION . '/static/img/' . $img . 'gif';
 }
 
 function alu_get_wpsmiliestrans()
@@ -21,7 +21,7 @@ function alu_get_wpsmiliestrans()
     $wpsmilies = array_unique($wpsmiliestrans);
     $output = '';
     foreach ($wpsmilies as $alt => $src_path) {
-        $output .= '<a class="add-smile" data-action="addSmile" data-smilies="' . $alt . '"><img class="wp-smiley" src="' . ALU_CDN . '/static/img/' . $src_path . '" /></a>';
+        $output .= '<a class="add-smile" data-action="addSmile" data-smilies="' . $alt . '"><img class="wp-smiley" src="' . '//source.ahdark.com/wordpress/plugin/Alu2Button-MDx/' . ALU_VERSION . '/static/img/' . $src_path . '" /></a>';
     }
     return $output;
 }
