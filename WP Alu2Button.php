@@ -46,7 +46,7 @@ function mce_smiley_settings($settings)
 
 	return $settings;
 }
-add_filter('tiny_mce_before_init', 'mce_smiley_settings');
+//add_filter('tiny_mce_before_init', 'mce_smiley_settings');
 
 const ALU_VERSION = '1.0.6';
 define('ALU_URL', plugins_url('', __FILE__));
